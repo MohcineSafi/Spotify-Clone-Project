@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="covers/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-antiquewhite">
+    <nav class="font-ubuntu">
+        <ul class="flex items-center justify-between h-16 bg-black text-white">
+            <li class="brand flex items-center font-bold text-lg">
+                <img src="logo.png" alt="Spotify" class="w-10 mr-2">
+                Spotify
+            </li>
+            <li class="px-4"><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li class="px-4"><a href="#" class="hover:text-gray-300">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container min-h-[72vh] bg-black text-white font-varela-round mx-auto w-70 border-12 p-8 bg-cover relative">
+        <div class="songList">
+            <h1 class="text-3xl mb-8">No Copyright Sounds</h1>
+            <div class="songItemContainer">
+                <div class="songItem flex items-center bg-white text-black mb-4 p-4 rounded-3xl">
+                    <img alt="1" class="w-10 h-10 mr-4 rounded-full">
+                    <span class="songName">دايلر - كثير ناس</span>
+                    <span class="songlistplay ml-auto">
+                        <span class="timestamp">05:34 <i id="0" class="far songItemPlay fa-play-circle cursor-pointer"></i></span>
+                    </span>
+                </div>
+
+                <div class="songItem flex items-center bg-white text-black mb-4 p-4 rounded-3xl">
+                    <img alt="2" class="w-10 h-10 mr-4 rounded-full">
+                    <span class="songName">وسام قطب-اخطاء</span>
+                    <span class="songlistplay ml-auto">
+                        <span class="timestamp">03:45 <i id="1" class="far songItemPlay fa-play-circle cursor-pointer"></i></span>
+                    </span>
+                </div>
+                <div class="songItem flex items-center bg-white text-black mb-4 p-4 rounded-3xl">
+                    <img alt="3" class="w-10 h-10 mr-4 rounded-full">
+                    <span class="songName">M3a l3chrane</span>
+                    <span class="songlistplay ml-auto">
+                        <span class="timestamp">04:20 <i id="2" class="far songItemPlay fa-play-circle cursor-pointer"></i></span>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom sticky bottom-0 h-24 bg-black text-white flex justify-center items-center flex-col">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100" class="w-80vw cursor-pointer">
+        <div class="icons mt-4">
+            <i class="fas fa-3x fa-step-backward cursor-pointer" id="previous"></i>
+            <i class="far fa-3x fa-play-circle cursor-pointer" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward cursor-pointer" id="next"></i>
+        </div>
+        <div class="songInfo absolute left-10vw font-varela-round flex items-center">
+            <img src="playing.gif" width="42px" alt="" id="gif" class="opacity-0 transition-opacity duration-400 ease-in">
+            <span id="masterSongName" class="ml-4">دايلر - كثير ناس</span>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
